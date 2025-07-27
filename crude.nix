@@ -14,19 +14,19 @@
       systems = {
         aarch64-darwin = {
           target = "aarch64-apple-darwin";
-          sha256 = "7a05314093a6385f499d907a3b860b995877daae517564c180f6c7ea7c68827b";
+          sha256 = "91c0dba9a63c7d15c148784b5889c80f2626b1c0f42153ec8bf070633b905c67";
         };
         x86_64-darwin = {
           target = "x86_64-apple-darwin";
-          sha256 = "8a170e3a0f7c99da2de433a3f2816862d6763d17233f662d72bfe6f57fd4253b";
+          sha256 = "1d24e8f2ec600b544f3acda8004a21810b302fbdb8588e6e64c240a9d7a494a2";
         };
         x86_64-linux = {
           target = "x86_64-unknown-linux-gnu";
-          sha256 = "b3238d3649b0692aff8a955a4752d5fe925c9d32d4ec43ee0e9a86917a84748b";
+          sha256 = "3a743186b5e71fddbbec532037942c6c81d0d1bfd9351f0f1bc05c7c193ec5ea";
         };
         i686-linux = {
           target = "i686-unknown-linux-gnu";
-          sha256 = "63870da1c6a964cc09dc4d59481ce2e77962319ff7c86c4a5a0751bc54398e16";
+          sha256 = "ee90df6ddd7e4ee0cb79a57434b90b2f5b481cc99b25f95e32ec9fed8e292db7";
         };
       };
     in eachSystem (mapAttrsToList (n: v: n) systems) (system: {
@@ -34,7 +34,7 @@
 
         stdenv.mkDerivation rec {
           name = "crude-${version}";
-          version = "0.1.1";
+          version = "0.1.2";
 
           nativeBuildInputs = [ unzip ];
 
